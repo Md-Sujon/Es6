@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun api</title>
+</head>
+<body>
+    <h1 id="funApi"></h1>
+    <h2>Click now: <a href="" id="link">Visit a api</a></h2>
+    <h2 >Type: <span id="type"></span></h2>
+   
+</body>
+<script>
+    
+   function funApi(){
+    fetch('http://www.boredapi.com/api/activity')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("funApi").innerText = data.activity;
+        document.getElementById("link").innerText = data.link;
+        document.getElementById("type").innerText = data.type;
+    });
+   }
+   setInterval(() => {
+    funApi();
+   }, 1000);
+
+
+
+</script>
+</html>
