@@ -8,7 +8,7 @@ const countrys = countryss =>{
        const country = countryss[i];
 
        const countrysDiv = document.createElement('div');
-
+             countrysDiv.className = 'countrys';
     //    const countryName = document.createElement('h3');
     //    countryName.innerText = country.name.common;
     //    countrysDiv.appendChild(countryName);
@@ -23,9 +23,11 @@ const countrys = countryss =>{
     //    capital.innerText = country.capital;
     //    countrysDiv.appendChild(capital);
        const countryInfo = `
-          <h3>${country.name.common}</h39>
-          <p>${country.capital}</p>
+          <h3 class="countryName">${country.name.common}</h3>
+          <p class="country">${country.capital}</p>
+          <img class="flags" src ="${country.flags.png}"></img>
        `
+       console.log(country.flag);
        countrysDiv.innerHTML = countryInfo;
        
       

@@ -1,0 +1,23 @@
+
+#countryName{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.countrys{
+    border: 2px solid rgb(255, 0, 149);
+    text-align: center;
+    border-radius:5px;
+    width: 350px;
+    height:150px;
+    
+    
+}
+.countryName{
+    color: midnightblue;
+    font-weight: bold;
+}
+.flags{
+    height: 30px;
+    width: 50px;
+}
